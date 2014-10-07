@@ -1,9 +1,39 @@
 #header div.section,
-#navigation div.dection,
+#navigation div.section,
 #breadcrumb,
 #main,
 #footer div.section{
 	width: 960px;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto ;
+}
+#content,
+#sidebar-first{
+	float:left;
+}
+#sidebar-first{
+	width: 240px;
+}
+#content{
+	width: 480px;
+}
+#sidebar-second{
+	float:left;
+	width: 240px;
+}
+body.one-sidebar #content{
+	width: 720px;
+}
+body.two-sidebars #content{
+	width: 480px;
+}
+body.no-sidebars #content{
+	width: 960px;
+}
+#navigation #secondary-menu{
+	float:right;
+	margin:0;
+}
+#navigation{
+	padding: 10px 0;
 }
