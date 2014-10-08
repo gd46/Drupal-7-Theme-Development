@@ -1,3 +1,10 @@
+//This css file is only for structure.
+
+html{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto ;
+}
 #header div.section,
 #navigation div.section,
 #breadcrumb,
@@ -36,4 +43,74 @@ body.no-sidebars #content{
 }
 #navigation{
 	padding: 10px 0;
+	margin-bottom: 15px;
+}
+#logo{
+	float:left;
+	margin-right: 10px;
+}
+#name-and-slogan h1#site-name, 
+#name-and-slogan div#site-name{
+	font-size: 2em;
+	margin: 20px 0;
+}
+body{
+	margin:0;
+}
+.block-inner{
+	margin: 0 20px;
+}
+h1#page-title{
+	margin: 20px;
+}
+#breadcrumb{
+	margin-bottom: 5px;
+}
+ul#main-menu li.first{
+	padding-left: 0;
+}
+ul#secondary-menu li.last{
+	padding-right: 0;
+}
+#footer{
+	margin-top: 15px;
+}
+#footer div.section{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#footer #block-system-powered-by .block-inner{
+	margin: 0;
+}
+.node .user-picture img{
+	width: 20px;
+	height: 20px;
+}
+.node .user-picture{
+	float:left;
+	margin-left: 10px;
+}
+.node .submitted{
+	margin-bottom: 10px;
+}
+div .messages{
+	margin: 20px;
+}
+#super-header div.section{
+	width: 960px;
+	margin-left:auto;
+	margin-right: auto;
+}
+#postscript{
+	margin-top: 15px;
+}
+#postscript div.section{
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#postscript .block{
+	float: left;
+	width: 300px;
+	margin-right: 20px;
 }

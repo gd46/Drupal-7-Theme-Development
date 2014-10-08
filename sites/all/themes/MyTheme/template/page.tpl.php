@@ -74,7 +74,11 @@
 ?>
 
   <div id="page-wrapper"><div id="page">
-
+  <?php if ($page['super_header']): ?>
+        <div id="super-header"><div class="section">
+          <?php print render($page['super_header']); ?>
+        </div></div> <!-- /.section, /#super-header -->
+      <?php endif; ?>
     <div id="header"><div class="section clearfix">
 
       <?php if ($logo): ?>
@@ -118,8 +122,6 @@
       <div id="breadcrumb"><?php print $breadcrumb; ?></div>
     <?php endif; ?>
 
-    <?php print $messages; ?>
-
     <div id="main-wrapper"><div id="main" class="clearfix">
 
       <?php if ($page['sidebar_first']): ?>
@@ -129,6 +131,7 @@
       <?php endif; ?>
 
       <div id="content" class="column"><div class="section">
+          <?php print $messages; ?>
         <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
         <a id="main-content"></a>
         <?php print render($title_prefix); ?>
@@ -148,7 +151,11 @@
       <?php endif; ?>
 
     </div></div> <!-- /#main, /#main-wrapper -->
-
+    <?php if ($page['postscript']): ?>
+        <div id="postscript"><div class="section clearfix">
+          <?php print render($page['postscript']); ?>
+        </div></div> <!-- /.section, /#postscript -->
+      <?php endif; ?>
     <div id="footer"><div class="section">
       <?php print render($page['footer']); ?>
     </div></div> <!-- /.section, /#footer -->
