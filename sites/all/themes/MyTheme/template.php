@@ -23,4 +23,36 @@ function MyTheme_node_recent_content($variables) {
 
   return $output;
 }
+function MyTheme_mark($variables) {
+  $type = $variables['type'];
+  global $user;
+  if ($user->uid) {
+    if ($type == MARK_NEW) {
+      return ' <span class="marker">**</span>';
+    }
+    elseif ($type == MARK_UPDATED) {
+      return ' <span class="marker">*</span>';
+    }
+  }
+}
+
+function MyTheme_preprocess_username(&$variables){
+  if(!empty($variables['account']->mail)){
+    $variables['extra'] .= '(' . $variables['account']->mail . ')';
+  }
+}
+
+function MyTheme_process_username(&$variables){
+    $variables['extra'] .= str_replace('@', '@NOSPAM.', $variables['extra']);
+}
+
+function MyTheme_preprocess_html(&$variables){
+  if($GLOBALS['user']->uid ==1){
+    //Adds css dynamically, one parameter - the page
+    //to the css file. 
+    //drupal_get_path gets the path - two parameters,
+    //theme or module, name of theme.
+    drupal_add_css(drupal_get_path('theme','MyTheme').'/css/superadmin.css');
+  }
+}
 ?>

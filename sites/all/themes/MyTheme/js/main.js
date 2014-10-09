@@ -1,4 +1,4 @@
-(function($){
+/*(function($){
 	//Activate the wonky april fool's prank.
 	//Adds javascript to load after the page loads.
 	Drupal.behaviors.d7td_wonky = {
@@ -8,4 +8,4 @@
     		});
 		}
 	}
-})(jQuery);
+})(jQuery); */
