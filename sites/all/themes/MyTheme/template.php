@@ -55,4 +55,24 @@ function MyTheme_preprocess_html(&$variables){
     drupal_add_css(drupal_get_path('theme','MyTheme').'/css/superadmin.css');
   }
 }
+
+function MyTheme_form_alter(&$form, &$form_state, $form_id){
+  if(!empty($form['#node_edit_form'])){
+    dpm($form);
+  }
+}
+
+function MyTheme_theme($existing, $type, $theme, $path){
+  return array(
+      'nody_form' => array(
+          'render element' => 'form',
+          'template' => 'node-form',
+          'path' => drupal_get_path('theme', 'MyTheme') . '/templates',
+        ),
+    );
+}
+
+function MyTheme_preprocess_node_form(&$variables){
+  $variables['full_form'] = drupal_render_children($variables['form']); 
+}
 ?>
